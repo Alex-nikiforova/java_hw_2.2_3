@@ -1,8 +1,8 @@
 public class CreditPaymentService {
-    public int calculate(int CreditAmount, int LoanTerms, float rate) {
-        float MonthlyRate = rate / 12;
-        float coefficient = (float) ((MonthlyRate * (Math.pow(1 + MonthlyRate, LoanTerms))) / (Math.pow(1 + MonthlyRate, LoanTerms) - 1));
-        int MonthlyPayment = (int) (CreditAmount * coefficient);
-        return MonthlyPayment;
+    public int calculate(int creditAmount, int loanTerms, float rate) {
+        float monthlyRate = rate / 12;
+        float coefficient = (float) ((monthlyRate * (Math.pow(1 + monthlyRate, loanTerms))) / (Math.pow(1 + monthlyRate, loanTerms) - 1));
+        int monthlyPayment = (int) (creditAmount * coefficient);
+        return monthlyPayment;
     }
 }
